@@ -1,0 +1,45 @@
+<html>
+
+<head>
+  <title>Apartment Finder</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link rel="stylesheet" href="static/style.css" type="text/css" />
+</head>
+
+<body background="static/CityBG.jpg" id="bg">
+  <div class="container">
+    <div class="row">
+      <div class="col l3"></div>
+      <div class="col l6 orange lighten-2 opacity script">
+        <h1 class="center">Results!!!</h1>
+      </div>
+      <div class="col l3"></div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col l3"></div>
+      <div class="col l6">
+        <h5 class="center">
+          <a href="/" class="blue-text text-darken-3 underline orange lighten-2 opacity">
+            Find More Apartment Qualities Here
+          </a>
+        </h5>
+      </div>
+      <div class="col l3"></div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col l1"> </div>
+      <div class="center purple lighten-2 opacity col l12">
+        <h4>
+          {% for x in topThree %}
+          {{ x }} <br>
+          {% endfor %}
+        </h4>
+      </div>
+      <div class="col l1"> </div>
+    </div>
+  </div>
+</body>

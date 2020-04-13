@@ -1,0 +1,60 @@
+<html>
+
+<head>
+  <title>Apartment 1</title>
+  <link rel="stylesheet" href="static/style.css" type="text/css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+<link href='https://fonts.googleapis.com/css2?family=Playfair+Display+SC:ital,wght@1,400;1,700&display=swap' rel="stylesheet">
+</head>
+
+<body background="static/CityBG.jpg" id="bg">
+  <div class="row"></div>
+  <div class="row">
+    <div class="col s12 m12 l3"></div>
+    <div class="col s12 m12 l6 center light-blue lighten-2 opacity">
+      <h1 class="scripty opacity1">Apartment 1!</h1>
+    </div>
+    <div class="col s12 m12 l3"></div>
+  </div>
+
+  <div class="container">
+    <div class="row valign-wrapper">
+      <div class="col l6 m6 s12 orange lighten-2 opacity center">
+        {% for x in apt1List %}
+        <ul>
+          <p>
+            <li>{{ x }}</li>
+          </p>
+        </ul>
+        {% endfor %}
+      </div>
+      <div>
+        <img width="500" src="static/Apt1.jpg" class="responsive-img l6"></img>
+      </div>
+    </div>
+    <div>
+      <form action="/apartment2" method="post">
+        <div class="row">
+          <div class="col l3"></div>
+          <div class="input-field col l6 center">
+            <select name="rating" class="browser-default blue lighten-2">
+              <option value="" disabled selected>Rating: (Out of 10)</option>
+              <option value="one">1</option>
+              <option value="two">2</option>
+              <option value="three">3</option>
+              <option value="four">4</option>
+              <option value="five">5</option>
+              <option value="six">6</option>
+              <option value="seven">7</option>
+              <option value="eight">8</option>
+              <option value="nine">9</option>
+              <option value="ten">10!!</option>
+            </select>
+            <input type="submit" value="Submit Choice!!" class="red lighten-2"/>
+          </div>
+            <div class="col l3"></div>
+          </div>
+    </form>
+  </div>
+  </div>
+</body>
