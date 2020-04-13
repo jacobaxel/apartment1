@@ -1,0 +1,60 @@
+/*.bkpic {*/
+/*    background-image: url("https://www.worldflagshop.com/wp-content/uploads/2018/10/195-flag-333x200.png")!important;*/
+/*    background-size: 1000000px 1000000px !important; */
+/*}*/
+.pic {
+    width:100% !important;
+    height:auto !important;
+}
+.script {
+    font-family: 'Aguafina Script' !important;
+}
+
+.pad {
+    height: 340px !important;
+}
+
+.pix {
+    width: 15000px !important;
+    height: auto !important;
+}
+
+.underline {
+    text-decoration: underline !important;
+}
+
+/*#hiii {*/
+/*    position: fixed !important; */
+/*    top: 0 !important; */
+/*    left: 0 !important; */
+	
+  /* Preserve aspet ratio */
+/*  min-width: 100% !important;*/
+/*  min-height: 100% !important;*/
+/*}*/
+
+.opacity {
+  opacity: 0.85 !important;
+  /*filter: opacity=50 !important;*/
+}
+
+.opacity1 {
+  opacity: 1.0 !important;
+  /*filter: opacity=50 !important;*/
+}
+
+
+#bg {
+    background-repeat: no-repeat !important;
+  background-size: 100% !important;
+}
+
+#bg1 {
+    background-repeat: no-repeat !important;
+  background-size: 100% !important;
+}
+
+#bg2 {
+    background-repeat: no-repeat !important;
+  background-size: 100% !important;
+}
