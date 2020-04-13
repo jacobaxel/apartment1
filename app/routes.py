@@ -57,6 +57,7 @@ def apartment3():
             score = random.randrange(1,10,1)
         else:
             score = model.score(userdata['rating'])
+        session['score2'] = score
         myList = session['options']
         apt3List = []
         for x in myList:
@@ -240,42 +241,7 @@ def end():
         topThree = toReturn
         return render_template('end.html', endList = endList, scoreList = scoreList,
         topThree = topThree, myList = myList)
-        #, predictions = predictions)
-
-
-        # if 'cuisine' not in userdata:
-        #     # cuisine = 'American'
-        #     cuisine = random.choice(model.cuisineList)['strArea']
-        #     session['cuisine'] = model.code(cuisine)['cuisine']
-        #     dishes = model.meals(session['cuisine'])
-        #     code = model.code(cuisine)['code']
-        #     return render_template('genre.html', cuisine=cuisine, dishes=dishes, code=code)
-        # cuisine = userdata['cuisine']
-        # session['cuisine'] = model.code(cuisine)['cuisine']
-        # dishes = model.meals(session['cuisine'])
-        # code = model.code(cuisine)['code']
-        # return render_template('genre.html', cuisine=cuisine, dishes=dishes, code=code)
-
-# @app.route('/dishes',methods=["GET","POST"])
-# def recipe():
-#     if request.method=="GET":
-#         return redirect('/')
-#     else:
-#         userdata = request.form
-#         if 'meal' not in userdata:
-#             meal = random.choice(model.meals(session['cuisine']))['strMeal']
-#             session['meal']=meal
-#             recipe = model.recipes(session['meal'])
-#             return render_template('recipe.html', meal=meal, recipe=recipe)
-#         meal = userdata['meal']
-#         session['meal']=meal
-#         recipe = model.recipes(session['meal'])
-#         return render_template('recipe.html', meal=meal, recipe=recipe)
 
 @app.route('/about')
 def about():
     return render_template('about.html')
-
-@app.route('/settings')
-def settings():
-    return render_template('settings.html')
